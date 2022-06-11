@@ -1,35 +1,28 @@
+import { toHaveFocus } from "@testing-library/jest-dom/dist/matchers";
 import React from "react";
 
-function Food({ name, picture }) {
-  return (
-    <div>
-      <h3>I like {name}</h3>
-      <img scr={picture} />
-    </div>
-  );
-}
+class App extends React.Component {
+  state = {
+    count: 0,
+  };
 
-const foodLike = [
-  {
-    name: "Kimchi",
-    image:
-      "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20211214_272%2F1639455797629bOiHk_JPEG%2F40591693355469890_494284185.jpg&type=a340.jpg",
-  },
-  {
-    name: "Ramen",
-    image:
-      "https://health.chosun.com/site/data/img_dir/2020/09/07/2020090702900_0.jpg",
-  },
-];
+  add = () => {
+    this.setState((current) => ({ count: current.count + 1 }));
+  };
 
-function App() {
-  return (
-    <div>
-      {foodLike.map((dish) => (
-        <Food name={dish.name} picture={dish.image} />
-      ))}
-    </div>
-  );
+  minus = () => {
+    this.setState((current) => ({ count: current.count - 1 }));
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>The number is: {this.state.count}</h1>
+        <button onClick={this.add}>Add</button>
+        <button onClick={this.minus}>Minus</button>
+      </div>
+    );
+  }
 }
 
 export default App;
