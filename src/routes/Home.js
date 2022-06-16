@@ -27,7 +27,10 @@ class Home extends React.Component {
       <section className="container">
         {isLoading ? (
           <div className="loader">
-            <span className="loader__text">Loading...</span>
+            <img
+              src={`${process.env.PUBLIC_URL}/public_assets/JAYFLIX.gif`}
+              alt="로딩"
+            />
           </div>
         ) : (
           <div className="movies">

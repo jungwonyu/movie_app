@@ -1,0 +1,42 @@
+figure {
+	width: 100%;
+	height: calc(100vh - 120px); /*전체 브라우저 높이에서 120px만큼 빼줌*/
+	position: relative;
+	overflow: hidden;
+	padding-top: 250px;
+}
+figure video {
+	object-fit: cover; /*영상을 figure안쪽에 꽉 차도록 설정*/
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+figure .inner {
+	width: 1180px;
+	margin: 170px 0 0 50px;
+	position: relative;
+}
+figure .inner h1 {
+	color: #fff;
+}
+figure .inner p {
+	color: #fff;
+	margin-bottom: 30px;
+}
+figure .inner a {
+	display: block;
+	width: 200px;
+	height: 30px;
+	border: 1px solid #bbb;
+	font: bold 11px/30px "arial";
+	color: #fff;
+	text-align: center;
+	letter-spacing: 1px;
+	transition: all 0.5s;
+}
+figure .inner a:hover {
+	background: #fff;
+	color: #555;
+}

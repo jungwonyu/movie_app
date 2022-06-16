@@ -6,7 +6,7 @@ function Navigation() {
   return (
     <header>
       <div className="container">
-        <a>
+        <a href="/home">
           <img
             src={`${process.env.PUBLIC_URL}/public_assets/JAYFLIX.png`}
             alt="로고"

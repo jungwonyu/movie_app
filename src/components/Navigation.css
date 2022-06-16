@@ -12,9 +12,6 @@ a, a:link, a:visited {
 .logo {
     height: 30px;
 }
-li {
-    list-style: none;
-}
 
 .container {
     width: 1140px;
@@ -42,12 +39,17 @@ header .container .main {
     letter-spacing: -5px;
 }
 
+header nav {
+    font-weight: 700;
+}
 header nav ul {
     display: flex;
+    
 }
 
 header nav ul li {
     padding: 10px;
+    list-style: none;
 }
 
 header button {
